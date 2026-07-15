@@ -2,24 +2,44 @@ import React from 'react'
 import SectionHeading from './SectionHeading'
 import TaskCard from './TaskCard'
 
-function TaskListing({ tasks, settasks, settask }) {
+function TaskListing({
+	tasks,
+	settasks,
+	settask,
+	showFinished,
+	handleShowFinishedChange,
+}) {
 	return (
 		<div className='w-3/5 m-auto bg-indigo-100 p-8 rounded-lg my-5'>
-			<SectionHeading value={'List Of Your Tasks'} />
+			<div className='flex items-center justify-between'>
+				<SectionHeading value={'List Of Your Tasks'} />
+				<p className='flex items-center gap-1 me-1'>
+					<input
+						onChange={handleShowFinishedChange}
+						checked={showFinished}
+						type='checkbox'
+						className='h-4 w-4 cursor-pointer accent-indigo-300'
+					/>
+					<span className='font-bold text-sm'>Show Finished</span>
+				</p>
+			</div>
 			{tasks.length <= 0 ? (
 				<p className='font-medium text-md text-gray-500! bg-white text-center w-1/4 mx-auto mt-4 py-2 rounded-sm'>
 					No Tasks Found!
 				</p>
 			) : (
-				tasks.map((task) => (
-					<TaskCard
-						key={task.id}
-						tasks={tasks}
-						settasks={settasks}
-						task={task}
-						settask={settask}
-					/>
-				))
+				tasks.map(
+					(task) =>
+						(showFinished || !task.isCompleated) && (
+							<TaskCard
+								key={task.id}
+								tasks={tasks}
+								settasks={settasks}
+								task={task}
+								settask={settask}
+							/>
+						),
+				)
 			)}
 		</div>
 	)

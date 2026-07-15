@@ -11,6 +11,12 @@ function TaskContainer() {
 
 	const [task, settask] = useState('')
 
+	const [showFinished, setshowFinished] = useState(false)
+
+	function handleShowFinishedChange() {
+		setshowFinished(!showFinished)
+	}
+
 	useEffect(() => {
 		localStorage.setItem('tasks', JSON.stringify(tasks))
 	}, [tasks])
@@ -30,7 +36,13 @@ function TaskContainer() {
 	return (
 		<div className='my-10'>
 			<AddTask task={task} settask={settask} handleAdd={handleAdd} />
-			<TaskListing tasks={tasks} settasks={settasks} settask={settask} />
+			<TaskListing
+				tasks={tasks}
+				settasks={settasks}
+				settask={settask}
+				showFinished={showFinished}
+				handleShowFinishedChange={handleShowFinishedChange}
+			/>
 		</div>
 	)
 }
