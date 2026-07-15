@@ -1,23 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import SectionHeading from './SectionHeading'
 import Button from './Button'
 
-function AddTask({ tasks, settasks }) {
-	// state for store input value
-	const [task, settask] = useState('')
-
-	// function for adding new task
-	function handleAdd() {
-		if (task.length <= 0) return
-		const newTask = {
-			text: task,
-			id: crypto.randomUUID(),
-			isCompleated: false,
-		}
-		settasks([...tasks, newTask])
-		settask('')
-	}
-
+function AddTask({ task, settask }) {
 	return (
 		<div className='w-3/5 m-auto bg-yellow-200 p-5 flex justify-evenly gap-5 rounded-lg my-5'>
 			<SectionHeading value={'Add New Task'} />
