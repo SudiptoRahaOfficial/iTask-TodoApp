@@ -18,7 +18,7 @@ function AddTask({ task, settask, handleAdd }) {
 	}
 
 	return (
-		<div className='w-3/5 m-auto bg-indigo-100 p-5 flex justify-evenly gap-5 rounded-lg my-5'>
+		<div className='w-14/15 md:w-5/7 lg:w-4/5 xl:w-3/5 m-auto bg-indigo-100 p-5 flex justify-evenly gap-5 rounded-lg my-5'>
 			<SectionHeading value={'Add New Task'} />
 			<form onSubmit={handleSubmit} className='w-3/5 flex gap-5'>
 				<input

@@ -4,7 +4,7 @@ import Logo from './Logo'
 function Footer() {
 	return (
 		<footer className='bg-indigo-300 py-2'>
-			<div className='container w-3/4 m-auto flex justify-between items-center'>
+			<div className='w-14/15 sm:w-3/4 m-auto flex justify-between items-center'>
 				<Logo />
 				<span className='text-sm font-serif cursor-pointer'>
 					&copy; {new Date().getFullYear()} iTask. All rights

@@ -10,7 +10,7 @@ function TaskListing({
 	handleShowFinishedChange,
 }) {
 	return (
-		<div className='w-3/5 m-auto bg-indigo-100 p-8 rounded-lg my-5'>
+		<div className='w-14/15 md:w-5/7 lg:w-4/5 xl:w-3/5 m-auto bg-indigo-100 p-8 rounded-lg my-5'>
 			<div className='flex items-center justify-between'>
 				<SectionHeading value={'List Of Your Tasks'} />
 				<p className='flex items-center gap-1 me-1'>
