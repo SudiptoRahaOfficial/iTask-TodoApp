@@ -26,7 +26,7 @@ function TaskContainer() {
 		if (task.length <= 0) return
 		const newTask = {
 			text: task,
-			id: crypto.randomUUID(),
+			id: Date.now().toString(),
 			isCompleated: false,
 		}
 		settasks([...tasks, newTask])
