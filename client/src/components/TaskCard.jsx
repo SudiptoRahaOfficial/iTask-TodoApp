@@ -1,9 +1,18 @@
 import React from 'react'
 import Button from './Button'
 
-function TaskCard({
-	task = { text: 'sudipto', id: '001', isCompleated: false },
-}) {
+function TaskCard({ tasks, settasks, task }) {
+	function hanleDelete() {
+		const taskId = task.id
+		const newTasks = tasks.filter((task) => task.id !== taskId)
+		settasks(newTasks)
+	}
+
+	function hanleEdit() {
+		const taskId = task.id
+		
+	}
+
 	return (
 		<div className='bg-white flex items-center justify-between p-4 my-4 rounded-md'>
 			<div className='flex items-center gap-3 w-4/5'>
@@ -16,8 +25,8 @@ function TaskCard({
 			</div>
 
 			<div className='actions flex gap-3'>
-				<Button value='Edit' />
-				<Button value='Delete' />
+				<Button value='Edit' onClickFunc={hanleEdit} />
+				<Button value='Delete' onClickFunc={hanleDelete} />
 			</div>
 		</div>
 	)

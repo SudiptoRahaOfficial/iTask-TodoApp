@@ -2,7 +2,7 @@ import React from 'react'
 import SectionHeading from './SectionHeading'
 import TaskCard from './TaskCard'
 
-function TaskListing({ tasks }) {
+function TaskListing({ tasks, settasks }) {
 	return (
 		<div className='w-3/5 m-auto bg-yellow-200 p-8 rounded-lg my-5'>
 			<SectionHeading value={'List Of Your Tasks'} />
@@ -11,7 +11,14 @@ function TaskListing({ tasks }) {
 					No Tasks Found!
 				</p>
 			) : (
-				tasks.map((task) => <TaskCard key={task.id} task={task} />)
+				tasks.map((task) => (
+					<TaskCard
+						key={task.id}
+						tasks={tasks}
+						settasks={settasks}
+						task={task}
+					/>
+				))
 			)}
 		</div>
 	)
