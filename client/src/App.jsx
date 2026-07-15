@@ -1,6 +1,6 @@
 import Navbar from './components/Navbar'
-import Footer from './components/Footer'
 import TaskContainer from './components/TaskContainer'
+import Footer from './components/Footer'
 
 function App() {
 	return (
