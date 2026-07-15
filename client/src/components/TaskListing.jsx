@@ -20,7 +20,7 @@ function TaskListing({
 						type='checkbox'
 						className='h-4 w-4 cursor-pointer accent-indigo-300'
 					/>
-					<span className='font-bold text-sm'>Show Finished</span>
+					<span className='font-bold text-xs sm:text-sm'>Show Finished</span>
 				</p>
 			</div>
 			{tasks.length <= 0 ? (
