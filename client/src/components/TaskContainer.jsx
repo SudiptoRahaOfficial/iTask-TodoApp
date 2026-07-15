@@ -21,7 +21,7 @@ function TaskContainer() {
 	return (
 		<div>
 			<AddTask task={task} settask={settask} handleAdd={handleAdd} />
-			<TaskListing tasks={tasks} settasks={settasks} />
+			<TaskListing tasks={tasks} settasks={settasks} settask={settask} />
 		</div>
 	)
 }

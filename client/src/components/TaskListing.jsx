@@ -2,7 +2,7 @@ import React from 'react'
 import SectionHeading from './SectionHeading'
 import TaskCard from './TaskCard'
 
-function TaskListing({ tasks, settasks }) {
+function TaskListing({ tasks, settasks, settask }) {
 	return (
 		<div className='w-3/5 m-auto bg-yellow-200 p-8 rounded-lg my-5'>
 			<SectionHeading value={'List Of Your Tasks'} />
@@ -17,6 +17,7 @@ function TaskListing({ tasks, settasks }) {
 						tasks={tasks}
 						settasks={settasks}
 						task={task}
+						settask={settask}
 					/>
 				))
 			)}

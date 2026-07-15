@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from './Button'
 
-function TaskCard({ tasks, settasks, task }) {
+function TaskCard({ tasks, settasks, task, settask }) {
 	function hanleDelete() {
 		const taskId = task.id
 		const newTasks = tasks.filter((task) => task.id !== taskId)
@@ -9,8 +9,8 @@ function TaskCard({ tasks, settasks, task }) {
 	}
 
 	function hanleEdit() {
-		const taskId = task.id
-		
+		settask(task.text)
+		hanleDelete()
 	}
 
 	return (
