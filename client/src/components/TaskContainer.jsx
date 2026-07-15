@@ -3,14 +3,14 @@ import AddTask from './AddTask'
 import TaskListing from './TaskListing'
 
 function TaskContainer() {
-  const [tasks, settasks] = useState([])
-  
-  return (
+	const [tasks, settasks] = useState([])
+
+	return (
 		<div>
 			<AddTask tasks={tasks} settasks={settasks} />
 			<TaskListing tasks={tasks} />
 		</div>
-  )
+	)
 }
 
 export default TaskContainer

@@ -9,7 +9,7 @@ function AddTask({ tasks, settasks }) {
 	// function for adding new task
 	function handleAdd() {
 		const newTask = {
-			taskText: task,
+			text: task,
 			id: crypto.randomUUID(),
 			isCompleated: false,
 		}
