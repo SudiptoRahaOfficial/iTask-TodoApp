@@ -8,6 +8,7 @@ function AddTask({ tasks, settasks }) {
 
 	// function for adding new task
 	function handleAdd() {
+		if (task.length <= 0) return
 		const newTask = {
 			text: task,
 			id: crypto.randomUUID(),
