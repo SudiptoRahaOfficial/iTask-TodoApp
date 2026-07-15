@@ -28,7 +28,7 @@ function TaskContainer() {
 	}
 
 	return (
-		<div>
+		<div className='my-10'>
 			<AddTask task={task} settask={settask} handleAdd={handleAdd} />
 			<TaskListing tasks={tasks} settasks={settasks} settask={settask} />
 		</div>

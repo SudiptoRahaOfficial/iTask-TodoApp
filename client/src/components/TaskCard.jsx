@@ -30,7 +30,7 @@ function TaskCard({ tasks, settasks, task, settask }) {
 					name={task.id}
 					checked={task.isCompleated}
 					type='checkbox'
-					className='h-4 w-4 cursor-pointer accent-yellow-500'
+					className='h-4 w-4 cursor-pointer accent-indigo-300'
 				/>
 
 				<p

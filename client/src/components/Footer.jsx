@@ -3,7 +3,7 @@ import Logo from './Logo'
 
 function Footer() {
 	return (
-		<footer className='bg-yellow-500 py-2'>
+		<footer className='bg-indigo-300 py-2'>
 			<div className='container w-3/4 m-auto flex justify-between items-center'>
 				<Logo />
 				<span className='text-sm font-serif cursor-pointer'>
