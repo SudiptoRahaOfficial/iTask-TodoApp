@@ -28,7 +28,7 @@ function TaskCard({ tasks, settasks, task, settask }) {
 				<input
 					onChange={handleDoneStatus}
 					name={task.id}
-					value={task.isCompleated}
+					checked={task.isCompleated}
 					type='checkbox'
 					className='h-4 w-4 cursor-pointer accent-yellow-500'
 				/>

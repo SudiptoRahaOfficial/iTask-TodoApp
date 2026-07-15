@@ -1,10 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import AddTask from './AddTask'
 import TaskListing from './TaskListing'
 
 function TaskContainer() {
-	const [tasks, settasks] = useState([])
+	const [tasks, settasks] = useState(() => {
+		const storedTasks = localStorage.getItem('tasks')
+
+		return storedTasks ? JSON.parse(storedTasks) : []
+	})
+
 	const [task, settask] = useState('')
+
+	useEffect(() => {
+		localStorage.setItem('tasks', JSON.stringify(tasks))
+	}, [tasks])
 
 	// function for adding new task
 	function handleAdd() {
